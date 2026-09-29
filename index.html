@@ -1,163 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Linghadharinee A S – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linghadharinee A S | Portfolio</title>
   <style>
-    body {
-      min-height: 100vh;
-      margin: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: url('webback.png') center center/cover no-repeat;
-      /* fallback color */
-      background-color: #22292f;
-    }
-    .overlay-center {
-      min-height: 95vh;
-      min-width: 340px;
-      max-width: 760px;
-      margin: 40px auto 32px auto;
-      padding: 34px 36px;
-      background: rgba(30,35,40,0.48);
-      border-radius: 28px;
-      box-shadow: 0 8px 30px #0008, 0 1.5px 8px #2222;
-      backdrop-filter: blur(22px) saturate(190%);
-      color: #ffe;
-      position: relative;
-      z-index: 1;
-    }
-    h1,h2,h3 { color: #fff; margin-top: 0; letter-spacing:0.03em;}
-    p, li, a, strong, span { color: #f6f6ff;}
-    a { color: #e8eeff; text-decoration: underline;}
-    .profile-pic {
-      width:110px; height:110px; object-fit:cover;
-      border-radius: 50%; border:2.8px solid #fff8; box-shadow:0 1.8px 22px #0004;margin-bottom:13px;
-    }
-    .tag {
-      background: rgba(240,240,255, 0.18);
-      color: #fff;
-      display:inline-block;
-      border-radius:13px;
-      padding:5px 15px;
-      font-size:1em;
-      margin:3px 6px 3px 0;
-      border: 1.2px solid #fff2;
-    }
-    section {margin-bottom:30px;}
-    .nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 27px;
-    }
-    .nav-btn {
-      background: none;
-      color: #f6f6ff;
-      font-size: 1.12em;
-      font-weight: 600;
-      border: none;
-      letter-spacing: 0.018em;
-      cursor: pointer;
-      padding: 7px 12px;
-      border-radius: 9px;
-      transition: background 0.14s;
-    }
-    .nav-btn:hover {
-      background: rgba(255,255,255,0.10);
-    }
-    @media (max-width:720px) {
-      .overlay-center { 
-        padding: 11px 2vw; 
-        max-width:98vw;
-        min-width:unset; }
-      .nav { 
-        flex-wrap: wrap; gap:9px; margin-bottom:20px;}
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; color: #333; }
+    header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
+    section { padding: 20px; max-width: 800px; margin: auto; }
+    h2 { color: #4CAF50; margin-top: 30px; }
+    ul { list-style-type: none; padding: 0; }
+    li { margin-bottom: 8px; }
+    footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    .contact a { color: #4CAF50; text-decoration: none; }
   </style>
 </head>
 <body>
-  <div class="overlay-center">
-    <!-- Navigation Bar -->
-    <div class="nav">
-      <button class="nav-btn" onclick="scrollToSection('about')">About</button>
-      <button class="nav-btn" onclick="scrollToSection('skills')">Skills</button>
-      <button class="nav-btn" onclick="scrollToSection('achievements')">Achievements</button>
-      <button class="nav-btn" onclick="scrollToSection('projects')">Projects</button>
-      <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
-    </div>
+  <header>
+    <h1>Linghadharinee A S</h1>
+    <p>Biomedical Engineering Undergraduate | Neurotechnology Enthusiast</p>
+  </header>
 
-    <!-- Main Content -->
-    <section id="about">
-      <center>
-        <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
-        <h1>Linghadharinee A S</h1>
-        <h3>Biomedical Engineering Student | Neurotechnology Enthusiast</h3>
-      </center>
-      <p style="text-align:center;color:#e6e6ff;margin:0 auto 12px auto;max-width:500px;">
-        Passionate Biomedical Engineering student with a strong academic foundation and a keen interest in neurotechnology and assistive innovation.
-      </p>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <span class="tag">C</span>
-      <span class="tag">Java</span>
-      <span class="tag">Python</span>
-      <span class="tag">Technical documentation</span>
-      <span class="tag">Arduino</span>
-      <span class="tag">Circuit design</span>
-      <span class="tag">Canva</span>
-      <span class="tag">Teamwork</span>
-      <span class="tag">Time Management</span>
-      <span class="tag">Leadership</span>
-      <span class="tag">Event Co-ordination</span>
-    </section>
-    <section id="achievements">
-      <h2>Achievements</h2>
-      <ul>
-        <li>Academic Topper (3 consecutive semesters)</li>
-        <li>Ranked 292nd, Code-O-Phile (IIT Nagpur)</li>
-        <li>2nd Place, national paper presentation (SR Engineering, Kalaignar Karunanidhi Institute)</li>
-        <li>1st Place, Design Thinking contest (KPRIET)</li>
-        <li>Additional Secretary, BMESI Student Chapter</li>
-        <li>Operations Lead, IEEE EMBS Society</li>
-        <li>Coordinator, symposiums/student programs</li>
-      </ul>
-      <h3>Certifications & Courses</h3>
-      <ul>
-        <li>NPTEL – Neuroscience of Human Movement (Elite), Microsensors/Implantable Devices</li>
-        <li>MATLAB Onramp & Functions, Machine Learning Fundamentals (MathWorks)</li>
-      </ul>
-    </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Your Project 1</strong>: Short description of project 1.</li>
-        <li><strong>Your Project 2</strong>: Short description of project 2.</li>
-        <!-- Add more projects as needed -->
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact & Socials</h2>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:linghadharinee08@gmail.com">linghadharinee08@gmail.com</a></li>
-        <li><strong>Phone:</strong> 9976824622</li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/linghadharinee-sureshkumar-7944aa2a5" target="_blank">Profile</a></li>
-      </ul>
-      <span class="tag">English: Fluent</span>
-      <span class="tag">Tamil: Fluent</span>
-      <span class="tag">Telugu: Fluent</span>
-      <span class="tag">Hindi: Intermediate</span>
-      <br>
-      <a href="resume_lingha.pdf" download style="display:inline-block;margin-top:13px;color:#fff;
-      background:#4b5f3c;padding:13px 25px;border-radius:9px;text-decoration:none;font-weight:600;">Download Resume</a>
-    </section>
-  </div>
-  <script>
-    // Smooth scroll to section
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({behavior: "smooth"});
-    }
-  </script>
+  <section>
+    <h2>About Me</h2>
+    <p>Passionate Biomedical Engineering student with strong interest in neurotechnology and assistive innovation. Experienced in research-driven projects, technical problem-solving, and leadership in student communities.</p>
+
+    <h2>Education</h2>
+    <p><strong>KPR Institute of Engineering and Technology</strong>, Coimbatore<br>
+    B.E. Biomedical Engineering | CGPA: 9.26/10 | Expected Graduation: May 2027</p>
+
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>ChromaSync:</strong> IoT-enabled diagnostic tool for neurodevelopmental coordination.</li>
+      <li><strong>Tremor Detection Device:</strong> Prototype for Parkinson’s tremor monitoring.</li>
+      <li><strong>EEG Deep Learning Model:</strong> Quantifying motor ability in children with Autism/Down Syndrome.</li>
+      <li><strong>HOIC:</strong> Hybrid oculo-inertial communicator for assistive device control.</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <p>Python, MATLAB, LabVIEW, Arduino, Raspberry Pi, Signal Processing, Machine Learning</p>
+
+    <h2>Achievements</h2>
+    <ul>
+      <li>Academic Topper Award (2023–2026)</li>
+      <li>Winner – Paper Presentation, LEAP’25</li>
+      <li>IEEE E-JUST RI-SO Student Researcher</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p class="contact">
+      📧 <a href="mailto:linghadharinee08@gmail.com">linghadharinee08@gmail.com</a><br>
+      📱 <a href="tel:9976824622">9976824622</a><br>
+      🌐 <a href="https://github.com/">GitHub</a> | <a href="https://linkedin.com/">LinkedIn</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>Thanks for visiting my portfolio at TENCON 2026!</p>
+  </footer>
 </body>
 </html>
-
