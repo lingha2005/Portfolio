@@ -1,62 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Linghadharinee A S | Portfolio</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; color: #333; }
-    header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
-    section { padding: 20px; max-width: 800px; margin: auto; }
-    h2 { color: #4CAF50; margin-top: 30px; }
-    ul { list-style-type: none; padding: 0; }
-    li { margin-bottom: 8px; }
-    footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-    .contact a { color: #4CAF50; text-decoration: none; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linghadharinee A S · Biomedical Engineering</title>
+<meta name="description" content="Biomedical engineering undergraduate working across neurotechnology, biosignals, AI and assistive devices.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e8eeef;--paper:#f6f9f9;--ink:#0d1a24;--mute:#4d5f6c;--line:#b9c7cc;--acc:#2434c9;--acc2:#dfe3fb;
+--h:'Bricolage Grotesque',system-ui,sans-serif;--b:'Newsreader',Georgia,serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.6 var(--b);
+background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;background-attachment:fixed;background-blend-mode:soft-light}
+body::before{content:"";position:fixed;inset:0;background:var(--bg);opacity:.86;z-index:-1}
+h1,h2,h3{font-family:var(--h);line-height:1.05;margin:0;letter-spacing:-.02em}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+section{padding:clamp(3.5rem,9vw,7rem) 0;border-top:1px solid var(--line)}
+.meta{font:600 .8rem/1.3 var(--h);color:var(--mute);letter-spacing:.01em}
+h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;max-width:16ch;margin-bottom:2rem}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--paper);padding:.5rem;z-index:20}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+nav b{font:800 1rem var(--h)}nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font:600 .9rem var(--h)}
+nav ul a{text-decoration:none;padding:.4rem 0;border-bottom:2px solid transparent}nav ul a:hover{border-color:var(--acc)}
+#menu{display:none;font:600 .9rem var(--h);background:none;border:1.5px solid var(--ink);padding:.6rem 1rem;border-radius:99px;min-height:44px}
+@media(max-width:820px){#menu{display:block}nav ul{display:none;position:absolute;top:58px;left:0;right:0;flex-direction:column;background:var(--paper);padding:.5rem 1.2rem 1rem;border-bottom:1px solid var(--line)}nav ul.open{display:flex}nav ul a{display:block;padding:.8rem 0;font-size:1.05rem}}
+.hero{padding:clamp(3rem,8vw,6rem) 0 0;border:0}
+.hero h1{font-size:clamp(2.8rem,9vw,7rem);font-weight:800;max-width:13ch;margin:1rem 0 1.5rem}
+.hero p.lead{max-width:34rem;font-size:1.25rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin:2rem 0}
+.btn{font:600 1rem var(--h);text-decoration:none;padding:.85rem 1.4rem;min-height:48px;display:inline-flex;align-items:center;border:1.5px solid var(--ink);border-radius:99px;transition:.2s}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}.btn:hover{transform:translateY(-2px);box-shadow:0 4px 0 var(--ink)}
+.wave{display:block;width:100%;height:150px;margin-top:1rem}.wave path{fill:none;stroke:var(--acc);stroke-width:2;vector-effect:non-scaling-stroke}
+.cols{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(2rem,6vw,5rem)}@media(max-width:820px){.cols{grid-template-columns:1fr}}
+.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.5rem}.tags li{font:600 .85rem var(--h);background:var(--acc2);color:#141f8f;padding:.3rem .8rem;border-radius:99px}
+.proj{border-top:1.5px solid var(--ink)}.proj:last-child{border-bottom:1.5px solid var(--ink)}
+.proj>button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:grid;grid-template-columns:8rem 1fr auto;gap:1rem;align-items:baseline;padding:1.4rem 0}
+.proj>button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.proj h3{font-size:clamp(1.3rem,3vw,2rem);font-weight:600}.proj .pl{font:800 1.6rem var(--h);color:var(--acc);transition:transform .25s}
+.proj[data-open="true"] .pl{transform:rotate(45deg)}.proj>button:hover h3{color:var(--acc)}
+.pb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}.proj[data-open="true"] .pb{grid-template-rows:1fr}
+.pb>div{overflow:hidden}.pin{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;padding:0 0 2rem 9rem}
+.pin h4{margin:0 0 .3rem;font:600 .85rem var(--h);color:var(--acc)}.pin p{margin:0;font-size:1rem;line-height:1.5}.pin .w{grid-column:1/-1}
+@media(max-width:820px){.proj>button{grid-template-columns:1fr auto}.proj>button .meta{grid-column:1/-1}.pin{grid-template-columns:1fr;padding-left:0}}
+.status{display:inline-block;font:600 .75rem var(--h);border:1.5px solid currentColor;border-radius:99px;padding:.1rem .6rem;margin-left:.4rem}
+.pipe{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1.5rem 0;font:600 .95rem var(--h)}
+.pipe span{background:var(--paper);border:1.5px solid var(--ink);padding:.5rem 1rem;border-radius:8px}.pipe i{color:var(--acc);font-style:normal}
+.sig{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.sig div{background:var(--paper);border:1px solid var(--line);padding:1rem;border-radius:6px}.sig svg{width:100%;height:46px}.sig path{fill:none;stroke:var(--acc);stroke-width:1.6}.sig b{font:600 1rem var(--h)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.card{background:var(--paper);border:1px solid var(--line);padding:1.3rem;border-radius:6px}.card h3{font-size:1.2rem;font-weight:600;margin-bottom:.3rem}.card p{margin:.4rem 0 0;font-size:1rem;line-height:1.5}
+.big{font:800 3rem/1 var(--h);color:var(--acc);margin-bottom:.4rem}
+.tl{border-left:2px solid var(--ink);margin-left:.3rem}.tl article{padding:0 0 1.8rem 1.5rem;position:relative}.tl article::before{content:"";position:absolute;left:-7px;top:.55rem;width:12px;height:12px;background:var(--acc);border-radius:50%}
+.tl h3{font-size:1.25rem;font-weight:600}.tl ul{margin:.4rem 0 0;padding-left:1.1rem;font-size:1rem}
+.ph{border:1.5px dashed var(--acc);padding:1rem;border-radius:6px;font-size:1rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem}.skills h3{font-size:1.1rem;margin-bottom:.6rem}
+.steps{display:flex;flex-wrap:wrap;gap:.6rem;font:800 clamp(1.4rem,4vw,2.4rem) var(--h);margin:1rem 0 1.5rem}.steps i{color:var(--acc);font-style:normal}
+.contact a.m{font:800 clamp(1.4rem,4.5vw,3rem) var(--h);word-break:break-all;color:var(--acc)}
+footer{padding:2.5rem 0;border-top:1.5px solid var(--ink);font-size:.95rem}footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.hero h1.name{font-size:clamp(2.6rem,10.5vw,8rem);max-width:none;margin:.5rem 0 1rem;line-height:.95}
+.disc{font:600 clamp(1rem,2.4vw,1.35rem) var(--h);color:var(--acc);margin:0 0 1.2rem}
+nav ul .ext a{border:1.5px solid var(--ink);border-radius:99px;padding:.35rem .8rem}
+.exp{display:flex;flex-wrap:wrap;gap:.5rem 2rem;font:600 clamp(1.1rem,2.6vw,1.6rem) var(--h)}
+.rs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);margin-bottom:4rem;padding-top:1.5rem;border-top:1.5px solid var(--ink)}
+.rs>header{grid-column:1/-1}.rs h3{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800}
+@media(max-width:820px){.rs{grid-template-columns:1fr}}
+.rs h4{margin:1.2rem 0 .3rem;font:600 .85rem var(--h);color:var(--acc)}.rs p{margin:0;font-size:1rem;line-height:1.55}
+.tag{font:600 .8rem var(--h);border:1.5px solid var(--acc);color:var(--acc);padding:.15rem .7rem;border-radius:99px;margin-right:.5rem}
+.eeg{background:var(--paper);border:1px solid var(--line);padding:1rem;border-radius:4px}.eeg svg{width:100%;height:auto;display:block}
+.flow{list-style:none;margin:1rem 0;padding:0;font:600 .95rem var(--h)}.flow li{padding:.35rem 0 .35rem 1rem;border-left:2px solid var(--acc)}.flow li+li{margin-top:.2rem}
+.traj{display:grid;grid-template-columns:repeat(5,1fr);border-top:1.5px solid var(--ink)}
+.traj div{padding:1rem 1rem 0 0}.traj b{font:800 1.2rem var(--h);display:block}.traj p{font-size:.95rem;line-height:1.45;margin:.3rem 0 0;color:var(--mute)}
+@media(max-width:820px){.traj{grid-template-columns:1fr}.traj div{border-bottom:1px solid var(--line);padding-bottom:1rem}}
+.feat{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(1.5rem,4vw,4rem);background:var(--ink);color:#eef3f4;padding:clamp(1.5rem,5vw,3.5rem);border-radius:4px}
+.feat h3{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:800}.feat h4{margin:1rem 0 .2rem;font:600 .85rem var(--h);color:#9fb0ff}.feat p{margin:0;font-size:1.02rem}
+@media(max-width:820px){.feat{grid-template-columns:1fr}}
+.cat{display:grid;grid-template-columns:14rem 1fr;gap:1.5rem;margin-bottom:2.5rem}.cat>h3{font-size:1.3rem;font-weight:800}.cat>h3 span{color:var(--acc);margin-right:.5rem}
+@media(max-width:820px){.cat{grid-template-columns:1fr}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2rem 2.5rem}.stats div{border-top:1.5px solid var(--ink);padding-top:.8rem}.stats p{margin:.3rem 0 0;font-size:1rem;line-height:1.45}
+.comm{columns:2;gap:3rem;margin:1.5rem 0 0;padding:0;list-style:none}@media(max-width:820px){.comm{columns:1}}.comm li{break-inside:avoid;padding:.7rem 0;border-top:1px solid var(--line)}.comm b{font-family:var(--h)}
+.gh a.r{display:grid;grid-template-columns:1fr 2fr auto;gap:1rem;padding:1rem 0;border-top:1px solid var(--line);text-decoration:none}.gh a.r:hover b{color:var(--acc)}.gh b{font:600 1.1rem var(--h)}
+@media(max-width:820px){.gh a.r{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Linghadharinee A S</h1>
-    <p>Biomedical Engineering Undergraduate | Neurotechnology Enthusiast</p>
-  </header>
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Main"><div class="wrap"><b>Linghadharinee A S</b>
+<button id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+<ul id="links"><li><a href="#about">About</a></li><li><a href="#research">Research</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#leadership">Leadership</a></li><li><a href="#builds">Builds</a></li><li class="ext"><a href="https://www.linkedin.com/in/linghadharinee-sureshkumar-7944aa2a5/" target="_blank" rel="noopener">LinkedIn</a></li><li class="ext"><a href="https://github.com/lingha2005/" target="_blank" rel="noopener">GitHub</a></li></ul></div></nav>
+<main id="main">
+<section class="hero"><div class="wrap">
+<h1 class="name">Linghadharinee<br>A S</h1>
+<p class="disc">Biomedical Engineering · Neurotechnology · Biomedical Signals · AI</p>
+<p class="lead">I like working where biology becomes data, and where data becomes something you can build. Right now that means EEG pipelines, motion signals and assistive devices.</p>
+<div class="btns"><a class="btn p" href="#research">View research</a><a class="btn" href="#projects">Projects</a><a class="btn" href="Resume_Lingha.pdf" target="_blank" rel="noopener" id="resumeBtn">Resume</a><a class="btn" href="#contact">Contact</a></div>
+<svg class="wave" viewBox="0 0 1000 150" preserveAspectRatio="none" role="img" aria-label="Animated trace resembling an EEG signal"><path id="wv" d=""/></svg>
+</div></section>
+<section id="about"><div class="wrap cols"><div><h2>Where the thing being measured is messy</h2>
+<p>I like problems where what you're trying to understand is untidy: a biological signal, a movement, a tremor, a motor task. The work is figuring out how engineering can make it measurable.</p>
+<p>My path has moved from biomedical instrumentation and hardware, to physiological signals, to signal processing and machine learning, and now to EEG and neurotechnology. I enjoy moving between the physical side (sensors, boards, a glasses frame) and the computational side (filtering, features, models).</p>
+<p class="meta">How I tend to work: observe, measure, prototype, model, test, iterate. It's a habit, not a formal method.</p></div>
+<div><p class="meta" style="margin-bottom:.8rem">Currently exploring</p><ul class="tags" id="interests"></ul></div></div></section>
+<section id="research"><div class="wrap"><h2>Research</h2>
+<div class="rs" id="iit"></div>
+<div class="rs"><header><span class="tag">Ongoing</span><span class="tag">Research internship</span><h3>IEEE EMBS RI-SO · Biomedical Sensors track</h3><p class="meta" style="margin-top:.4rem">EEG Pipeline Lead · 2026</p></header>
+<div><h4>The problem</h4><p>High-quality EEG systems can be expensive, hard to deploy, and concentrated in specialised clinical settings.</p>
+<h4>The direction</h4><p>Our team is developing a lower-cost, more deployable EEG system to make early neurodevelopmental screening more accessible. We're guided by Anna Júlia Pereira Oliveira.</p>
+<h4>My role</h4><p>I lead the EEG pipeline: signal processing, noise reduction, pipeline architecture and signal quality, so that captured EEG is useful for downstream analysis. The system is still in development and this is not a finished clinical pipeline.</p>
+<ol class="flow" aria-label="EEG pipeline stages"><li>Raw EEG and signal acquisition</li><li>Noise and artifact handling</li><li>Preprocessing</li><li>Signal quality assessment</li><li>Feature and downstream analysis</li><li>Possible clinical or research interpretation (future)</li></ol></div>
+<div class="eeg" id="eeg"></div>
+</div>
+<h3 style="font-size:1.6rem;font-weight:800;margin:0 0 1rem">These aren't separate detours: my interests have been converging</h3>
+<div class="traj" id="traj"></div></div></section>
+<section id="featured"><div class="wrap"><h2>Featured project</h2><div class="feat" id="feat"></div></div></section>
+<section id="projects"><div class="wrap"><h2>Projects, by area</h2><div id="plist"></div></div></section>
+<section id="signals"><div class="wrap"><h2>Signals I work with</h2><p style="max-width:40rem">Illustrative traces, not recorded data.</p><div class="sig" id="sigs"></div></div></section>
+<section id="research-out"><div class="wrap"><h2>Research outputs</h2><div class="grid" id="rsx"></div>
+<p class="ph" style="margin-top:1.5rem"><b>To fill in:</b> the resume lists paper presentations but not titles, co-authors or DOIs. Edit the TODO entries in <code>research</code> in the script.</p></div></section>
+<section id="experience"><div class="wrap"><h2>How the work built up</h2><div class="tl" id="ex"></div></div></section>
+<section id="leadership"><div class="wrap"><h2>Leadership and communities</h2><div id="ld"></div><ul class="comm" id="cm"></ul></div></section>
+<section id="proof"><div class="wrap"><h2>Achievements</h2><div class="stats" id="ac"></div></div></section>
+<section id="skills"><div class="wrap"><h2>Toolkit</h2><div class="skills" id="sk"></div></div></section>
+<section id="builds" class="gh"><div class="wrap"><h2>Code and builds</h2><div id="gh"></div><div class="btns"><a class="btn" href="https://github.com/lingha2005/" target="_blank" rel="noopener">All repositories on GitHub</a></div></div></section>
+<section id="contact" class="contact"><div class="wrap"><h2>Have a project, dataset, or strange biomedical problem?</h2>
+<a class="m" href="mailto:linghadharinee08@gmail.com">linghadharinee08@gmail.com</a>
+<div class="btns"><a class="btn" href="https://www.linkedin.com/in/linghadharinee-sureshkumar-7944aa2a5/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/lingha2005/" target="_blank" rel="noopener">GitHub</a></div>
+<p class="meta">Coimbatore, India</p></div></section>
+</main>
+<footer><div class="wrap"><span><b>Linghadharinee A S</b> · Biomedical Engineering · <span id="yr"></span></span><span><a href="https://www.linkedin.com/in/linghadharinee-sureshkumar-7944aa2a5/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/lingha2005/" target="_blank" rel="noopener">GitHub</a> · Built with curiosity and too many signal plots.</span></div></footer>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Passionate Biomedical Engineering student with strong interest in neurotechnology and assistive innovation. Experienced in research-driven projects, technical problem-solving, and leadership in student communities.</p>
-
-    <h2>Education</h2>
-    <p><strong>KPR Institute of Engineering and Technology</strong>, Coimbatore<br>
-    B.E. Biomedical Engineering | CGPA: 9.26/10 | Expected Graduation: May 2027</p>
-
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>ChromaSync:</strong> IoT-enabled diagnostic tool for neurodevelopmental coordination.</li>
-      <li><strong>Tremor Detection Device:</strong> Prototype for Parkinson’s tremor monitoring.</li>
-      <li><strong>EEG Deep Learning Model:</strong> Quantifying motor ability in children with Autism/Down Syndrome.</li>
-      <li><strong>HOIC:</strong> Hybrid oculo-inertial communicator for assistive device control.</li>
-    </ul>
-
-    <h2>Skills</h2>
-    <p>Python, MATLAB, LabVIEW, Arduino, Raspberry Pi, Signal Processing, Machine Learning</p>
-
-    <h2>Achievements</h2>
-    <ul>
-      <li>Academic Topper Award (2023–2026)</li>
-      <li>Winner – Paper Presentation, LEAP’25</li>
-      <li>IEEE E-JUST RI-SO Student Researcher</li>
-    </ul>
-
-    <h2>Contact</h2>
-    <p class="contact">
-      📧 <a href="mailto:linghadharinee08@gmail.com">linghadharinee08@gmail.com</a><br>
-      📱 <a href="tel:9976824622">9976824622</a><br>
-      🌐 <a href="https://github.com/">GitHub</a> | <a href="https://linkedin.com/">LinkedIn</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>Thanks for visiting my portfolio at TENCON 2026!</p>
-  </footer>
+<script>
+/* ===== EDIT YOUR CONTENT HERE ===== */
+const links={resume:"Resume_Lingha.pdf"};
+const interests=["EEG signal processing","Low-cost EEG systems","Neurodevelopmental screening","EEG-based motor ability","Brain-computer interfaces","Assistive technology"];
+const TODO="Add from your report or offer letter.";
+const iit=[["Context",TODO+" Lab or group name, supervisor and dates are not in the resume yet."],["What I worked on",TODO],["Technical work",TODO],["My contribution",TODO+" Keep your part separate from the wider project."],["What I learned",TODO],["Research environment",TODO],["Outputs",TODO+" Only list reports, models or talks that exist."]];
+const feat={title:"Deep learning for EEG-based motor ability quantification",status:"Ongoing · Jan 2026 – present",
+problem:"Motor development in children with conditions like Autism and Down syndrome is hard to measure objectively.",
+contrib:"I'm developing the deep learning architecture and its data pipeline: preprocessing, filtering and automated feature extraction from raw EEG.",
+approach:"Train neural networks on motor-task-related brain rhythms, aiming for an objective motor ability score that could help clinicians track therapy progress over time.",
+tech:"Python, MNE, EEGLAB, deep learning",result:"No results yet. This is a research effort in progress and not a validated clinical tool."};
+const cats=[["Neurotechnology",[],"The EEG motor-ability work is featured above, and the RI-SO EEG pipeline is under Research."],
+["Assistive technology",[{title:"Hybrid Oculo-Inertial Communicator (HOIC)",when:"Date to add",type:"Assistive device",status:"Prototype",problem:"People with very limited mobility need a way to generate digital commands for communication.",did:"Built the acquisition hardware with a BioAmp EXG Pill for EOG and an MPU6050 accelerometer/gyroscope on a custom glasses frame, and designed the filtering workflow for EOG and head-motion data.",result:"A communication interface fusing eye biopotentials with head motion for real-time commands. No accuracy figures are stated.",tech:"EOG, BioAmp EXG Pill, MPU6050, C++"}]],
+["Biomedical signals",[{title:"Tremor detection for Parkinson's disease",when:"Jun – Dec 2025",type:"Wearable prototype",status:"Prototype",problem:"Hand tremor in Parkinson's patients needs to be detected so that early intervention is possible.",did:"Developed a prototype with an accelerometer/gyroscope module and Raspberry Pi Pico, connected to an alert system for caretakers.",result:"Presented at college symposiums and received awards for innovation and practical impact. Not clinically validated.",tech:"Accelerometer, gyroscope, Raspberry Pi Pico, Python"}]],
+["Embedded systems",[{title:"ChromaSync: coordination analyzer",when:"Nov 2023 – Mar 2024",type:"Diagnostic prototype · IoT",status:"Completed prototype",problem:"Visuomotor and bilateral coordination in people with conditions such as DCD and ADHD is usually assessed subjectively.",did:"Designed an IoT-enabled tool with colour sensors and microcontrollers to quantify fine motor performance, including Inter-Response Interval and precision.",result:"Demonstrated as a prototype for evaluating cognitive-motor integration. Not clinically validated.",tech:"Colour sensors, microcontrollers, IoT"}]]];
+const traj=[["Hardware","Sensor and microcontroller builds; hospital and medical-device internships."],["Biomedical signals","Tremor detection with motion sensors."],["Signal processing","HOIC: filtering EOG and head-motion data."],["AI / ML","Deep learning on EEG for motor ability."],["Neurotechnology","RI-SO EEG pipeline and IIT Delhi research."]];
+const signals=[["EEG","Brain rhythms during motor tasks",9,5],["EOG","Eye movement biopotentials",3,14],["IMU","Head and hand motion",6,3],["Tremor","Accelerometer and gyroscope",14,4]];
+const research=[
+{title:"Paper presentation, LEAP'25",venue:"Leeway Biomedical, Bangalore",year:"2025",note:"Winner. TODO: add paper title.",link:""},
+{title:"National-level paper presentation",venue:"Sri Ramakrishna Engineering College, Coimbatore",year:"TODO",note:"Second prize. TODO: add paper title.",link:""},
+{title:"National-level paper presentation",venue:"Kalaignar Karunanidhi Institute of Technology, Coimbatore",year:"TODO",note:"Second prize. TODO: add paper title.",link:""}];
+const experience=[
+["Nov 2023 – Mar 2024","Built ChromaSync","An IoT coordination analyzer, my first sensor-and-microcontroller project."],
+["Jun – Jul 2024","Intern, GEM Hospitals","Preventive maintenance and documentation of biomedical equipment; observed instruments in surgical and diagnostic use."],
+["2024","Operations Lead, IEEE EMBS KPRIET","Planned and coordinated technical events and workshops."],
+["Dec 2024 – Jan 2025","Intern, Leeway Biomedical","Product development, testing and documentation in a medical device startup."],
+["Jun – Dec 2025","Tremor detection prototype","Wearable prototype with an alert system; presented at college symposiums."],
+["Jan 2026 – present","EEG motor-ability model","Deep learning pipeline on raw EEG."],
+["2026","Research Intern, IIT Delhi","Details to add (see Research)."],
+["2026","EEG Pipeline Lead, IEEE EMBS RI-SO","Biomedical Sensors track; ongoing."]];
+const leadership=[["Chair, IEEE EMBS KPRIET · VISTA'26","2026 – present","I direct the chapter's strategy and operations, after two years as Operations Lead running technical events and workshops."],["Secretary roles, BMESI Student Chapter","2024 – present","Event documentation, communications and coordination."],["Volunteer Engagement HR, Petals NGO","2025 – present","Re-engaging inactive volunteers."]];
+const comms=[["IEEE EMBS","Chair, KPRIET chapter"],["Women in Neurotech","Member (exact organisation name to confirm)"],["IEEE Brain","Student member since 2024"],["IEEE Women in Engineering","Student member since 2024"]];
+const awards=[
+{n:"3×",t:"Academic Topper Award",x:"KPRIET, 2023–24, 2024–25 and 2025–26."},
+{n:"9.26",t:"CGPA out of 10",x:"B.E. Biomedical Engineering, expected May 2027."},
+{n:"1st",t:"Paper presentation, LEAP'25",x:"Leeway Biomedical. Also runner-up special mention at the LEAP'25 hackathon."},
+{n:"1st",t:"Design Thinking Contest",x:"KPRIET."},
+{n:"2×2nd",t:"National paper presentations",x:"Sri Ramakrishna Engineering College and Kalaignar Karunanidhi Institute of Technology."},
+{n:"262nd",t:"Nationwide rank",x:"Code-O-Phile Quiz, IIT Nagpur."},
+{n:"Elite",t:"NPTEL: Neuroscience of Human Movements",x:"Plus NPTEL Topper Incentive Awards at KPRIET."}];
+const skills=[["Biomedical and signals","EEG and EOG processing, IMU motion sensing, biomedical sensors and instrumentation, biocontrol systems"],["AI and ML","Python, MNE, deep learning, machine learning fundamentals (MathWorks)"],["Hardware","Arduino, ESP8266, Raspberry Pi Pico, MPU6050, BioAmp EXG Pill, PCB design coursework"],["Software and tools","MATLAB, Simulink, EEGLAB, LabVIEW, C, Git, VS Code"],["Design","Canva, Adobe, Mermaid, Flowgarithm"]];
+const repos=[["Myosa-Hybrid-Occulo-Intertial-Communicator","An assistive device for communication in individuals with immobility","C++"],["Wearable-Tremor-Detection-system-for-Parkinsons-Disease","Wearable device for measuring tremors and setting an alarm for caretakers","Python"],["GroFlow","A vibecoded web app for community building and funding for small businesses, made at a hackathon","Python"]];
+/* ===== RENDER ===== */
+const $=s=>document.querySelector(s);
+$("#resumeBtn").href=links.resume;$("#yr").textContent=new Date().getFullYear();
+$("#interests").innerHTML=interests.map(i=>`<li>${i}</li>`).join("");
+$("#iit").innerHTML=`<header><span class="tag">Research internship</span><h3>Indian Institute of Technology Delhi</h3><p class="meta" style="margin-top:.4rem">Research Intern · 2026</p><p class="ph" style="margin-top:1rem"><b>Placeholder:</b> this internship isn't on the resume yet, so the details below are left for you to fill in rather than guessed.</p></header>`+iit.map(r=>`<div><h4>${r[0]}</h4><p>${r[1]}</p></div>`).join("");
+$("#traj").innerHTML=traj.map(t=>`<div><b>${t[0]}</b><p>${t[1]}</p></div>`).join("");
+$("#feat").innerHTML=`<div><p class="meta" style="color:#9fb0ff">${feat.status}</p><h3>${feat.title}</h3><h4>Problem</h4><p>${feat.problem}</p><h4>Current status</h4><p>${feat.result}</p></div><div><h4>My contribution</h4><p>${feat.contrib}</p><h4>Approach</h4><p>${feat.approach}</p><h4>Technology</h4><p>${feat.tech}</p></div>`;
+let n=0;$("#plist").innerHTML=cats.map((c,ci)=>`<div class="cat"><h3><span>0${ci+1}</span>${c[0]}</h3><div>${c[1].length?c[1].map(p=>{const i=n++;return `<div class="proj" data-open="false"><button aria-expanded="false" aria-controls="p${i}"><span class="meta">${p.when}</span><h3>${p.title}<span class="status">${p.status}</span></h3><span class="pl" aria-hidden="true">+</span></button><div class="pb" id="p${i}" role="region"><div><div class="pin"><div class="w meta">${p.type}</div><div><h4>The problem</h4><p>${p.problem}</p></div><div><h4>What I did</h4><p>${p.did}</p></div><div><h4>Outcome</h4><p>${p.result}</p></div><div class="w"><h4>Tools</h4><p>${p.tech}</p></div></div></div></div></div>`}).join(""):`<p>${c[2]}</p>`}</div></div>`).join("");
+document.querySelectorAll(".proj>button").forEach(b=>b.onclick=()=>{const p=b.parentElement,o=p.dataset.open!=="true";p.dataset.open=o;b.setAttribute("aria-expanded",o)});
+const trace=(a,f,w=300,h=46)=>{let d="";for(let x=0;x<=w;x+=3)d+=(x?"L":"M")+x+" "+(h/2+Math.sin(x/f)*a*Math.sin(x/(f*4.3)+1)+Math.sin(x/(f*.37))*a*.25).toFixed(1);return d};
+$("#sigs").innerHTML=signals.map(s=>`<div><b>${s[0]}</b><svg viewBox="0 0 300 46" preserveAspectRatio="none" aria-hidden="true"><path d="${trace(s[3]*2.2,s[2])}"/></svg><span class="meta">${s[1]}</span></div>`).join("");
+$("#rsx").innerHTML=research.map(r=>`<div class="card"><span class="meta">${r.year}</span><h3>${r.title}</h3><span class="meta">${r.venue}</span><p>${r.note}</p></div>`).join("");
+$("#ex").innerHTML=experience.map(e=>`<article><span class="meta">${e[0]}</span><h3>${e[1]}</h3><p style="margin:.2rem 0 0;font-size:1rem">${e[2]}</p></article>`).join("");
+$("#ld").innerHTML=leadership.map(l=>`<div style="padding:1rem 0;border-top:1.5px solid var(--ink)"><span class="meta">${l[1]}</span><h3 style="font-size:1.4rem;font-weight:600">${l[0]}</h3><p style="margin:.3rem 0 0;font-size:1rem">${l[2]}</p></div>`).join("");
+$("#cm").innerHTML=comms.map(c=>`<li><b>${c[0]}</b><br><span class="meta">${c[1]}</span></li>`).join("");
+$("#ac").innerHTML=awards.map(a=>`<div><div class="big">${a.n}</div><b style="font-family:var(--h)">${a.t}</b><p>${a.x}</p></div>`).join("");
+$("#sk").innerHTML=skills.map(s=>`<div><h3>${s[0]}</h3><p style="font-size:1rem;margin:0">${s[1]}</p></div>`).join("");
+$("#gh").innerHTML=repos.map(r=>`<a class="r" href="${"https://github.com/lingha2005/"+r[0]}" target="_blank" rel="noopener"><b>${r[0]}</b><span>${r[1]}</span><span class="meta">${r[2]}</span></a>`).join("");
+function eeg(){let s='<svg viewBox="0 0 840 280" role="img" aria-label="Illustrative four-channel EEG showing raw and filtered traces with signal quality per channel">';
+for(let x=60;x<=740;x+=34)s+=`<line x1="${x}" y1="0" x2="${x}" y2="240" stroke="#b9c7cc" stroke-width=".6"/>`;
+const q=["Good","Good","Fair","Poor"],qc=["#1a7f4b","#1a7f4b","#a86b00","#b3261e"];
+for(let c=0;c<4;c++){const y0=34+c*58;let r="",f="";
+for(let x=60;x<=740;x+=4){const t=x/40+c*2,b=Math.sin(t*1.9)*9+Math.sin(t*.7+c)*6+Math.sin(t*4.1)*3,nz=Math.sin(x*1.7+c)*4+Math.sin(x*.53)*3+(c==3?Math.sin(x*.21)*10:0)+(c==2&&x>400&&x<440?-16:0);
+f+=(x>60?"L":"M")+x+" "+(y0-b).toFixed(1);r+=(x>60?"L":"M")+x+" "+(y0-b-nz).toFixed(1)}
+s+=`<text x="0" y="${y0+4}" fill="#4d5f6c" font-size="13" font-family="sans-serif">Ch ${c+1}</text><path d="${r}" fill="none" stroke="#8fa3ab" stroke-width="1"/><path d="${f}" fill="none" stroke="#2434c9" stroke-width="1.8"/><circle cx="762" cy="${y0}" r="5" fill="${qc[c]}"/><text x="772" y="${y0+4}" fill="#4d5f6c" font-size="12" font-family="sans-serif">${q[c]}</text>`}
+for(let i=0;i<=4;i++)s+=`<text x="${60+i*170-8}" y="262" fill="#4d5f6c" font-size="12" font-family="sans-serif">${i} s</text>`;
+return s+'</svg><p class="meta" style="margin:.6rem 0 0">Illustrative EEG pipeline visualization, not patient data. Grey: raw. Blue: filtered. Dots: signal quality.</p>'}
+$("#eeg").innerHTML=eeg();
+/* hero waveform */
+const wv=$("#wv"),rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function draw(t){let d="";for(let x=0;x<=1000;x+=5){const u=x/60+t;const y=75+Math.sin(u)*18*Math.sin(u/3.1)+Math.sin(u*2.7)*9+Math.sin(u*7.3)*3+(Math.sin(u/11)>.93?-35*Math.sin(u*9):0);d+=(x?"L":"M")+x+" "+y.toFixed(1)}wv.setAttribute("d",d)}
+if(rm)draw(2);else{let t=0;(function f(){t+=.018;draw(t);requestAnimationFrame(f)})()}
+</script>
 </body>
 </html>
